@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { LinearProgress } from '@mui/material'
 //import { BrowserRouter } from 'react-router-dom'
 
 import { MUIThemeProvider } from './theme'
@@ -8,6 +9,12 @@ import { MUIThemeProvider } from './theme'
 import Home from './pages/Home'
 
 function App() {
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }, [])
   return (
     <MUIThemeProvider>
       {/* <Providers>
@@ -15,7 +22,7 @@ function App() {
           <Routes />
         </BrowserRouter>
       </Providers> */}
-      <Home />
+      {loading ? <LinearProgress color="success" /> : <Home />}
     </MUIThemeProvider>
   )
 }
