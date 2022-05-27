@@ -10,11 +10,11 @@ import Home from './pages/Home'
 
 function App() {
   const [loading, setLoading] = useState(true)
+
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false)
-    }, 1000)
+    document.fonts.load('12px Raleway').then(() => setLoading(false))
   }, [])
+
   return (
     <MUIThemeProvider>
       {/* <Providers>
@@ -22,7 +22,11 @@ function App() {
           <Routes />
         </BrowserRouter>
       </Providers> */}
-      {loading ? <LinearProgress color="success" /> : <Home />}
+      {loading ? (
+        <LinearProgress color="success" />
+      ) : (
+        <Home onLoad={() => setLoading(false)} />
+      )}
     </MUIThemeProvider>
   )
 }
