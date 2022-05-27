@@ -28,7 +28,7 @@ function App() {
       {loading ? (
         <LinearProgress color="success" sx={{ position: 'absolute' }} />
       ) : (
-        <Home onLoad={() => setLoading(false)} />
+        <Home />
       )}
     </MUIThemeProvider>
   )
