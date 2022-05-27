@@ -16,7 +16,7 @@ const Hero = () => {
       <Box sx={sxStyles.heroBox} id="hero">
         <Typography
           variant="h1"
-          sx={{ fontFamily: '"AmaticSC"', fontWeight: 'bold' }}
+          sx={{ fontFamily: '"Amatic SC", cursive', fontWeight: 'bold' }}
         >
           Sumate a opa y aporta tu <br />
           granito de arena al planeta

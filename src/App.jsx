@@ -12,7 +12,10 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    document.fonts.load('12px Raleway').then(() => setLoading(false))
+    document.fonts.load('12px "Amatic SC"').then(() => {
+      setTimeout(() => setLoading(false), 300)
+    })
+    return () => clearTimeout()
   }, [])
 
   return (
@@ -23,7 +26,7 @@ function App() {
         </BrowserRouter>
       </Providers> */}
       {loading ? (
-        <LinearProgress color="success" />
+        <LinearProgress color="success" sx={{ position: 'absolute' }} />
       ) : (
         <Home onLoad={() => setLoading(false)} />
       )}
