@@ -10,10 +10,11 @@ import Button from './Button'
 const ContactForm = () => {
   const onSubmit = (values, { setSubmitting }) => {
     setTimeout(() => {
-      console.log('Submitted values:', values)
+      console.log('Submitted values:', Object.values(values))
+      alert(JSON.stringify(values, null, 4))
       //confirmSend(() => sendMailApi(values))
       setSubmitting(false)
-    }, 1000)
+    }, 500)
   }
 
   const schema = object().shape({

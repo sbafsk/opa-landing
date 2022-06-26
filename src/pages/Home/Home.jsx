@@ -1,6 +1,12 @@
 import React from 'react'
 
-import { Hero, Objetivos, Contacto, Footer } from '../../components/Home'
+import {
+  Hero,
+  Objetivos,
+  Equipo,
+  Contacto,
+  Footer
+} from '../../components/Home'
 import { Navbar } from '../../components/Navbar'
 
 export const Home = () => {
@@ -9,6 +15,7 @@ export const Home = () => {
       <Navbar />
       <Hero />
       <Objetivos />
+      <Equipo />
       <Contacto />
       <Footer />
     </>
