@@ -50,12 +50,7 @@ const Hero = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img
-            loading="lazy"
-            src={instaButton}
-            alt="OPA Instagram"
-            width={'80px'}
-          />
+          <img src={instaButton} alt="OPA Instagram" width={'80px'} />
         </a>
       </Box>
     </Parallax>

@@ -26,33 +26,22 @@ const Objetivos = () => {
   return (
     <Box sx={{ position: 'relative' }}>
       <Box sx={sx.box}>
-        <img
-          loading="lazy"
-          src={amigosImage}
-          alt="amigos opa"
-          width={'450px'}
-        />
+        <img src={amigosImage} alt="amigos opa" width={'450px'} />
         <Typography sx={sx.text}>{text.first}</Typography>
       </Box>
       <Box sx={sx.box}>
         <Typography sx={sx.text}>{text.second}</Typography>
         <Box sx={sx.iconBox}>
-          <img
-            loading="lazy"
-            src={plantaMundo}
-            alt="planta mundo"
-            width={'240px'}
-          />
+          <img src={plantaMundo} alt="planta mundo" width={'240px'} />
         </Box>
       </Box>
       <Box sx={sx.box}>
         <Box sx={sx.iconBox}>
-          <img loading="lazy" src={lampara} alt="lampara" width={'140px'} />
+          <img src={lampara} alt="lampara" width={'140px'} />
         </Box>
         <Typography sx={sx.text}>{text.third}</Typography>
       </Box>
       <img
-        loading="lazy"
         src={plantasBase}
         alt="lampara"
         style={{
@@ -64,7 +53,6 @@ const Objetivos = () => {
         }}
       />
       <img
-        loading="lazy"
         src={plantasDerecha}
         alt="lampara"
         style={{
@@ -78,7 +66,6 @@ const Objetivos = () => {
         width="20%"
       />
       <img
-        loading="lazy"
         src={plantasIzquierda}
         alt="lampara"
         style={{
