@@ -28,7 +28,7 @@ export const NavItems = ({ sx, direction, sxItems }) => {
         return (
           <ListItem
             sx={{
-              ...sxStyles.listItem,
+              ...styles.listItem,
               color: '#FFF',
               '&:hover': {
                 color: (theme) => theme.pallete.secondary.main
@@ -53,7 +53,7 @@ export const NavItems = ({ sx, direction, sxItems }) => {
   )
 }
 
-const sxStyles = {
+const styles = {
   listItem: {
     fontSize: '14px',
     cursor: 'pointer'

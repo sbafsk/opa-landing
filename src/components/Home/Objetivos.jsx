@@ -7,14 +7,7 @@ import lampara from '../../assets/images/lampara_opa.svg'
 import plantasBase from '../../assets/images/plantas_base_opa.png'
 import plantasDerecha from '../../assets/images/plantas_derecha_opa.png'
 import plantasIzquierda from '../../assets/images/plantas_izquierda_opa.png'
-
-const texts = {
-  first:
-    'En OPA queremos impactar de manera positiva y sostenible en nuestras acciones.',
-  second:
-    'Por eso nos motiva que te sumes a esta comunidad y dejes tu huella positiva en el planeta.',
-  third: 'Enterate sobre noticias, tips, recomendaciones para podes lograrlo.'
-}
+import { text } from '../../util/contants'
 
 const sx = {
   box: { display: 'flex', p: 16, fontSize: '36px' },
@@ -33,22 +26,33 @@ const Objetivos = () => {
   return (
     <Box sx={{ position: 'relative' }}>
       <Box sx={sx.box}>
-        <img src={amigosImage} alt="amigos opa" width={'450px'} />
-        <Typography sx={sx.text}>{texts.first}</Typography>
+        <img
+          loading="lazy"
+          src={amigosImage}
+          alt="amigos opa"
+          width={'450px'}
+        />
+        <Typography sx={sx.text}>{text.first}</Typography>
       </Box>
       <Box sx={sx.box}>
-        <Typography sx={sx.text}>{texts.second}</Typography>
+        <Typography sx={sx.text}>{text.second}</Typography>
         <Box sx={sx.iconBox}>
-          <img src={plantaMundo} alt="planta mundo" width={'240px'} />
+          <img
+            loading="lazy"
+            src={plantaMundo}
+            alt="planta mundo"
+            width={'240px'}
+          />
         </Box>
       </Box>
       <Box sx={sx.box}>
         <Box sx={sx.iconBox}>
-          <img src={lampara} alt="lampara" width={'140px'} />
+          <img loading="lazy" src={lampara} alt="lampara" width={'140px'} />
         </Box>
-        <Typography sx={sx.text}>{texts.third}</Typography>
+        <Typography sx={sx.text}>{text.third}</Typography>
       </Box>
       <img
+        loading="lazy"
         src={plantasBase}
         alt="lampara"
         style={{
@@ -60,6 +64,7 @@ const Objetivos = () => {
         }}
       />
       <img
+        loading="lazy"
         src={plantasDerecha}
         alt="lampara"
         style={{
@@ -73,6 +78,7 @@ const Objetivos = () => {
         width="20%"
       />
       <img
+        loading="lazy"
         src={plantasIzquierda}
         alt="lampara"
         style={{

@@ -12,16 +12,16 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={sxStyles.navbarBox}>
+      <AppBar sx={styles.navbarBox}>
         <img src={logo} alt="logo" width={'100px'} />
 
-        <NavItems direction={'row'} sx={sxStyles.navbarItems} />
+        <NavItems direction={'row'} sx={styles.navbarItems} />
 
         <IconButton
           onClick={open}
           edge="end"
           aria-label="menu"
-          sx={sxStyles.iconButton}
+          sx={styles.iconButton}
         >
           <MenuIcon />
         </IconButton>
@@ -31,7 +31,7 @@ const Navbar = () => {
   )
 }
 
-const sxStyles = {
+const styles = {
   navbarBox: {
     flexDirection: 'row',
     alignItems: 'center',
