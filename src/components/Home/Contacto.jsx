@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Divider, Typography } from '@mui/material'
-import QueueAnim from 'rc-queue-anim'
 import { Parallax } from 'react-parallax'
 
 import ContactForm from '../Form'
@@ -12,13 +11,11 @@ const styles = {
     p: 10,
     height: '100vh',
     display: 'flex',
-    alignItems: 'center'
-  },
-  animBox: {
-    display: 'flex',
+    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-around'
   },
+
   textBox: {
     p: 5,
     mt: 8,
@@ -30,18 +27,6 @@ const styles = {
   }
 }
 
-const animation = {
-  type: {
-    queue: 'bottom',
-    one: {
-      y: '+=30',
-      opacity: 0,
-      type: 'from',
-      ease: 'easeOutQuad'
-    }
-  }
-}
-
 const Contacto = () => {
   return (
     <Parallax
@@ -50,22 +35,14 @@ const Contacto = () => {
       strength={150}
       bgImageAlt="hero image"
     >
-      <Box sx={styles.contactBox}>
-        <QueueAnim
-          key="text"
-          type={animation.type.queue}
-          leaveReverse
-          ease={['easeOutQuad', 'easeInQuad']}
-          style={styles.animBox}
-        >
-          <Box sx={styles.textBox}>
-            <Typography variant={'h4'}>{text.contact}</Typography>
-            <Divider />
-          </Box>
-          <Box sx={styles.formBox}>
-            <ContactForm />
-          </Box>
-        </QueueAnim>
+      <Box sx={styles.contactBox} name="contact">
+        <Box sx={styles.textBox}>
+          <Typography variant={'h4'}>{text.contact}</Typography>
+          <Divider />
+        </Box>
+        <Box sx={styles.formBox}>
+          <ContactForm />
+        </Box>
       </Box>
     </Parallax>
   )

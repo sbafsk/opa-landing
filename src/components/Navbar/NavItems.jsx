@@ -13,7 +13,7 @@ const items = [
   },
   {
     text: 'Nosotros',
-    to: 'aboutUs'
+    to: 'team'
   },
   {
     text: 'Contacto',
@@ -37,13 +37,7 @@ export const NavItems = ({ sx, direction, sxItems }) => {
             }}
             key={i}
           >
-            <Link
-              to={item.to}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={1000}
-            >
+            <Link to={item.to} spy={true} smooth={true} duration={666}>
               {item.text}
             </Link>
           </ListItem>

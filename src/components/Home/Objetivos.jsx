@@ -24,7 +24,7 @@ const sx = {
 
 const Objetivos = () => {
   return (
-    <Box sx={{ position: 'relative' }}>
+    <Box sx={{ position: 'relative' }} name="objetives">
       <Box sx={sx.box}>
         <img src={amigosImage} alt="amigos opa" width={'450px'} />
         <Typography sx={sx.text}>{text.first}</Typography>
@@ -43,7 +43,7 @@ const Objetivos = () => {
       </Box>
       <img
         src={plantasBase}
-        alt="lampara"
+        alt="plantas base"
         style={{
           position: 'absolute',
           bottom: 0,
@@ -54,7 +54,7 @@ const Objetivos = () => {
       />
       <img
         src={plantasDerecha}
-        alt="lampara"
+        alt="plantas derecha"
         style={{
           position: 'absolute',
           right: 0,
@@ -67,7 +67,7 @@ const Objetivos = () => {
       />
       <img
         src={plantasIzquierda}
-        alt="lampara"
+        alt="plantas izquierda"
         style={{
           position: 'absolute',
           left: 0,

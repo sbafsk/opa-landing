@@ -27,7 +27,7 @@ const styles = {
 
 const Hero = () => {
   return (
-    <Parallax strength={150}>
+    <Parallax strength={150} name="hero">
       <Background>
         <img
           loading="lazy"

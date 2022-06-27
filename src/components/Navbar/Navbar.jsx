@@ -6,13 +6,21 @@ import { Drawer } from './Drawer'
 import { NavItems } from './NavItems'
 import { useDisclosure } from '../../hooks/useDisclosure'
 import logo from '../../assets/images/opa_logo.png'
+import { useScroll } from './useScroll'
 
 const Navbar = () => {
   const { isOpen, open, close } = useDisclosure()
 
+  const [scrolled] = useScroll()
+
+  const appBarStyle =
+    scrolled < 50
+      ? styles.navbarBox
+      : { ...styles.navbarBox, ...styles.navbarBoxScroll }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={styles.navbarBox}>
+      <AppBar sx={appBarStyle}>
         <img src={logo} alt="logo" width={'100px'} />
 
         <NavItems direction={'row'} sx={styles.navbarItems} />
@@ -40,7 +48,13 @@ const styles = {
     height: 70,
     boxShadow: 'none',
     px: 12,
-    position: 'fixed'
+    position: 'fixed',
+    transition: '0.5s'
+  },
+  navbarBoxScroll: {
+    px: 4,
+    height: 35,
+    background: '#00705D'
   },
   navbarItems: {
     display: { xs: 'none', sm: 'flex' }
