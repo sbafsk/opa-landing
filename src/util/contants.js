@@ -38,3 +38,7 @@ export const members = [
     linkedin: 'https://www.linkedin.com/in/sebastian-pereira-rivero/'
   }
 ]
+
+export const urls = {
+  instagram: 'https://www.instagram.com/opa_uy/'
+}

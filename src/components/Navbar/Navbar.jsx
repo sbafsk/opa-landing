@@ -21,7 +21,7 @@ const Navbar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar sx={appBarStyle}>
-        <img src={logo} alt="logo" width={'100px'} />
+        <img src={logo} alt="logo" width={scrolled < 50 ? '100px' : '70px'} />
 
         <NavItems direction={'row'} sx={styles.navbarItems} />
 
