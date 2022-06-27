@@ -6,19 +6,18 @@ import { members } from '../../util/contants'
 
 const styles = {
   teamBox: {
-    p: 10,
-    height: '70vh',
-    background: '#00DDBD',
+    py: 10,
+    background: 'linear-gradient( #00DDBD,#00705D)',
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: { md: 'row', sm: 'column' },
+    justifyContent: 'space-around',
     alignItems: 'center'
   }
 }
 
 const Equipo = () => {
   return (
-    <Box sx={styles.teamBox}>
+    <Box sx={styles.teamBox} name="team">
       {members.map((t) => (
         <Team key={t.name} {...t} />
       ))}
