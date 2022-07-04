@@ -9,7 +9,7 @@ export const text = {
   second:
     'Por eso nos motiva que te sumes a esta comunidad y dejes tu huella positiva en el planeta.',
   third: 'Enterate sobre noticias, tips, recomendaciones para podes lograrlo.',
-  footer: 'OPA - 2022 | opa_contacto@gmail.com | follow :D'
+  footer: 'OPA - 2022 | opacontactouy@gmail.com | follow :D'
 }
 
 export const members = [
