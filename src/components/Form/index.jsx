@@ -5,14 +5,13 @@ import { object, string } from 'yup'
 import FormInput from './FormInput'
 import Button from './Button'
 
-//import { sendMailApi, confirmSend } from '../../util/send_mail'
+import { sendEmail } from '../../util/send_mail'
 
 const ContactForm = () => {
-  const onSubmit = (values, { setSubmitting }) => {
-    setTimeout(() => {
-      console.log('Submitted values:', Object.values(values))
-      alert(JSON.stringify(values, null, 4))
-      //confirmSend(() => sendMailApi(values))
+  const onSubmit = (values, { setSubmitting, resetForm }) => {
+    setTimeout(async () => {
+      const { error } = await sendEmail(JSON.stringify(values))
+      !error && resetForm()
       setSubmitting(false)
     }, 500)
   }
