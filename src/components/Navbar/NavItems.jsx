@@ -31,7 +31,7 @@ export const NavItems = ({ sx, direction, sxItems }) => {
               ...styles.listItem,
               color: '#FFF',
               '&:hover': {
-                color: (theme) => theme.pallete.secondary.main
+                color: (theme) => theme.pallete.primary.main
               },
               ...sxItems
             }}

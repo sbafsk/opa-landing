@@ -2,7 +2,7 @@ import React from 'react'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { CssBaseline } from '@mui/material'
 
-const configTheme = {
+const config = {
   pallete: {
     primary: { main: '#00705D' },
     secondary: { main: '#00DDBD' }
@@ -24,8 +24,7 @@ const configTheme = {
   }
 }
 
-// To use responsive font sizes, include the following line
-const theme = createTheme(configTheme)
+const theme = createTheme(config)
 
 export const MUIThemeProvider = ({ children }) => {
   return (

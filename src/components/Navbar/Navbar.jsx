@@ -54,7 +54,7 @@ const styles = {
   navbarBoxScroll: {
     px: 4,
     height: 35,
-    background: '#00705D'
+    background: (theme) => theme.pallete.secondary.main
   },
   navbarItems: {
     display: { xs: 'none', sm: 'flex' }

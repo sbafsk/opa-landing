@@ -23,7 +23,7 @@ const sx = {
     fontSize: 36,
     lineHeight: '140%',
     fontWeight: 800,
-    color: '#00705D',
+    color: (theme) => theme.pallete.primary.main,
     alignSelf: 'center',
     ml: 4
   },

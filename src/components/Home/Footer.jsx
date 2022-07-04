@@ -8,9 +8,9 @@ const styles = {
   footer: {
     w: '100vw',
     py: 1,
-    bgcolor: '#00705D',
+    background: (theme) => theme.pallete.primary.main,
     textAlign: 'center',
-    color: '#00DDBD'
+    color: (theme) => theme.pallete.secondary.main
   }
 }
 
@@ -22,9 +22,11 @@ const Footer = () => {
         href={urls.instagram}
         target="_blank"
         size="small"
-        sx={{ m: 1, ml: 2 }}
+        sx={{ ml: 2 }}
       >
-        <InstagramIcon />
+        <InstagramIcon
+          sx={{ color: (theme) => theme.pallete.secondary.main }}
+        />
       </IconButton>
     </Box>
   )
