@@ -17,8 +17,8 @@ const styles = {
     width: { md: '240px', sm: '70%' },
     position: 'relative',
     borderRadius: '10px',
-    height: '420px',
-    background: '#00DDBD'
+    background: '#00DDBD',
+    height: '420px'
   }
 }
 
@@ -42,15 +42,20 @@ const Team = ({ name, bio, img, linkedin }) => {
         }}
       />
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div">
+        <Typography
+          gutterBottom
+          variant="h6"
+          component="div"
+          sx={{ display: 'flex', justifyContent: 'space-between' }}
+        >
           {name}
+          <IconButton href={linkedin} target="_blank" size="small">
+            <LinkedInIcon />
+          </IconButton>
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {bio}
         </Typography>
-        <IconButton href={linkedin} target="_blank" size="small" sx={{ m: 1 }}>
-          <LinkedInIcon />
-        </IconButton>
       </CardContent>
     </Card>
   )
